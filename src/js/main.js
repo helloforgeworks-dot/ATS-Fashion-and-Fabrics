@@ -1,5 +1,5 @@
 /**
- * ATS Fashion & Fabrics - Main Application Bootstrap
+ * ATS Fashion & Fabrics - Main Application Bootstrap (High-Performance)
  */
 import { initNavigation } from './navigation.js';
 import { initProductGallery } from './productGallery.js';
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Global Robust Image Fallback System
   initImageFallbackSystem();
 
-  // Initialize Scroll Reveal Animations
+  // Initialize Scroll Reveal Animations (High performance pre-triggering)
   initScrollAnimations();
 
   console.log('⚡ ATS Fashion & Fabrics - High-Performance Platform Initialized');
@@ -76,6 +76,7 @@ function initScrollAnimations() {
     return;
   }
 
+  // Pre-trigger elements 120px before entering viewport for seamless zero-lag rendering
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -85,8 +86,8 @@ function initScrollAnimations() {
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1
+    rootMargin: '120px 0px 0px 0px',
+    threshold: 0.01
   });
 
   elements.forEach(el => observer.observe(el));

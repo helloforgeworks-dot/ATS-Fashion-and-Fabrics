@@ -1,5 +1,5 @@
 /**
- * ATS Fashion & Fabrics - Navigation Controller
+ * ATS Fashion & Fabrics - Navigation Controller (High-Performance Throttled)
  */
 export function initNavigation() {
   const header = document.querySelector('.site-header');
@@ -8,12 +8,19 @@ export function initNavigation() {
   const mobileBackdrop = document.querySelector('.mobile-drawer-backdrop');
   const navLinks = document.querySelectorAll('.nav-link, .mobile-drawer-link');
 
-  // Sticky header background and compact height on scroll
+  // Throttled sticky header scroll handler using requestAnimationFrame
+  let ticking = false;
   function handleScroll() {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 20) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }
 
@@ -48,7 +55,7 @@ export function initNavigation() {
 
   mobileBackdrop?.addEventListener('click', closeMobileMenu);
 
-  // Close mobile drawer on link click & smooth scroll with offset
+  // Close mobile drawer on link click & instant smooth scroll
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
@@ -59,7 +66,7 @@ export function initNavigation() {
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          const headerHeight = header ? header.offsetHeight : 80;
+          const headerHeight = header ? header.offsetHeight : 70;
           const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight + 10;
           window.scrollTo({
             top: targetPosition,
@@ -70,7 +77,7 @@ export function initNavigation() {
     });
   });
 
-  // Active section indicator using IntersectionObserver
+  // Active section indicator using optimized IntersectionObserver
   const sections = document.querySelectorAll('section[id]');
   if ('IntersectionObserver' in window && sections.length > 0) {
     const observerOptions = {

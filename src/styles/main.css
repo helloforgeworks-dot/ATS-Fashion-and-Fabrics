@@ -7,12 +7,11 @@
 @import './sections.css';
 @import './footer.css';
 
-/* Keyframe Animations & Reveal Classes */
+/* Ultra-Fast Snappy Reveal Classes */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .reveal-on-scroll.revealed,
@@ -21,12 +20,12 @@
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 { transition-delay: 0.05s; }
+.delay-2 { transition-delay: 0.1s; }
+.delay-3 { transition-delay: 0.15s; }
+.delay-4 { transition-delay: 0.2s; }
 
-/* Custom Sleek Light Scrollbar */
+/* Sleek Light Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
