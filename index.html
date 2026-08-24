@@ -139,9 +139,17 @@
   </aside>
 
   <!-- ==========================================================================
-       07. HERO SECTION (Campaign Editorial)
+       07. HERO SECTION (Campaign Editorial with Ambient Apparel Video)
        ========================================================================== -->
   <section class="hero-section" id="hero">
+    <!-- Ambient Fashion / Apparel Manufacturing Video Background -->
+    <div class="hero-video-bg-wrap" aria-hidden="true">
+      <video class="hero-bg-video" autoplay muted loop playsinline poster="/images/hero/ats-hero-lingerie.jpg">
+        <source src="/videos/hero-apparel-loop.webm" type="video/webm">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
     <div class="hero-grid">
       <div class="hero-content reveal-on-scroll">
         <div class="hero-badge-group">
@@ -150,6 +158,10 @@
             OEM &amp; PRIVATE LABEL PARTNER
           </div>
           <div class="badge">GHAZIABAD, DELHI NCR</div>
+          <div class="badge badge-motion">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            ATELIER MOTION
+          </div>
         </div>
 
         <h1 class="hero-title">
@@ -187,15 +199,30 @@
 
       <div class="hero-visual reveal-on-scroll delay-2">
         <div class="hero-visual-frame">
-          <img 
-            src="/images/hero/ats-hero-lingerie.jpg" 
-            alt="ATS Fashion and Fabrics luxury intimate apparel and lingerie manufacturing campaign"
-            width="600"
-            height="750"
-            loading="eager"
-            fetchpriority="high"
-            onerror="if (this.src !== '/assets/images/hero-campaign.svg') this.src = '/assets/images/hero-campaign.svg';"
+          <video 
+            class="hero-showcase-video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            poster="/images/hero/ats-hero-lingerie.jpg"
+            aria-label="ATS Fashion and Fabrics luxury intimate apparel and lingerie manufacturing in action"
           >
+            <source src="/videos/hero-apparel-loop.webm" type="video/webm">
+            <img 
+              src="/images/hero/ats-hero-lingerie.jpg" 
+              alt="ATS Fashion and Fabrics luxury intimate apparel and lingerie manufacturing campaign"
+              width="600"
+              height="750"
+              loading="eager"
+              fetchpriority="high"
+              onerror="if (this.src !== '/assets/images/hero-campaign.svg') this.src = '/assets/images/hero-campaign.svg';"
+            >
+          </video>
+          <div class="video-live-pill" aria-hidden="true">
+            <span class="live-pulse"></span>
+            <span>ATELIER IN MOTION</span>
+          </div>
         </div>
 
         <div class="hero-stamp" aria-hidden="true">

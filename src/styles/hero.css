@@ -7,14 +7,47 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-bg-primary);
-  background-image: 
-    radial-gradient(ellipse 60% 50% at 75% 30%, rgba(186, 230, 253, 0.45) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 15% 70%, rgba(224, 242, 254, 0.5) 0%, transparent 60%);
   overflow-x: clip;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
+}
+
+/* Ambient Fashion & Apparel Video Background */
+.hero-video-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.25;
+  filter: saturate(1.15) brightness(1.02);
+  transform: scale(1.03);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 65% 55% at 75% 30%, rgba(186, 230, 253, 0.48) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 15% 70%, rgba(224, 242, 254, 0.52) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(250, 252, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(250, 252, 255, 0.9) 100%);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
 
 .hero-grid {
@@ -45,6 +78,20 @@
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
+}
+
+.badge-motion {
+  background-color: var(--color-powder-ice);
+  color: var(--color-cyan-deep);
+  border-color: rgba(2, 132, 199, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-motion svg {
+  color: var(--color-cyan-deep);
+  animation: pulseLive 2s infinite ease-in-out;
 }
 
 .hero-title {
@@ -138,6 +185,7 @@
   box-sizing: border-box;
 }
 
+.hero-showcase-video,
 .hero-visual-frame img {
   width: 100%;
   height: 100%;
@@ -146,8 +194,39 @@
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.hero-visual:hover .hero-showcase-video,
 .hero-visual:hover .hero-visual-frame img {
   transform: scale(1.04);
+}
+
+.video-live-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(9, 13, 22, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 4;
+}
+
+.video-live-pill .live-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: pulseLive 1.5s infinite ease-in-out;
 }
 
 .hero-floating-card {

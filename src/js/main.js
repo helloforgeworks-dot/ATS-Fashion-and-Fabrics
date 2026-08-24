@@ -29,8 +29,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Scroll Reveal Animations (High performance pre-triggering)
   initScrollAnimations();
 
+  // Initialize Hero Video Performance Manager
+  initHeroVideoManager();
+
   console.log('⚡ ATS Fashion & Fabrics - High-Performance Platform Initialized');
 });
+
+function initHeroVideoManager() {
+  const videos = document.querySelectorAll('.hero-bg-video, .hero-showcase-video');
+  if (!videos.length) return;
+
+  videos.forEach(video => {
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay policy prevented playback, poster image will display automatically
+      });
+    }
+  });
+
+  if (!('IntersectionObserver' in window)) return;
+
+  const heroSection = document.getElementById('hero');
+  if (!heroSection) return;
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      videos.forEach(video => {
+        if (entry.isIntersecting) {
+          if (video.paused) {
+            video.play().catch(() => {});
+          }
+        } else {
+          if (!video.paused) {
+            video.pause();
+          }
+        }
+      });
+    });
+  }, {
+    threshold: 0.05
+  });
+
+  videoObserver.observe(heroSection);
+}
 
 function initImageFallbackSystem() {
   const fallbackMap = {
