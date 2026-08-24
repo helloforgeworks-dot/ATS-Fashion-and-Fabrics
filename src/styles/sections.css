@@ -1,0 +1,852 @@
+/* Global Section Layouts */
+.section {
+  padding: clamp(5rem, 8vw, 8.5rem) 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: var(--color-bg-secondary);
+}
+
+.section-dark {
+  background-color: var(--color-dark-primary);
+  color: var(--color-text-light);
+}
+
+.section-dark .section-headline,
+.section-dark .card-title,
+.section-dark h3 {
+  color: #FFFFFF;
+}
+
+.section-dark .body-regular,
+.section-dark .body-lead {
+  color: var(--color-dark-text-muted);
+}
+
+.section-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.section-header {
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header .section-description {
+  margin-top: 1rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   08. ABOUT ATS SECTION (Split Screen Editorial)
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.about-visual-wrap {
+  position: relative;
+}
+
+.about-image-frame {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+}
+
+.about-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.about-image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.pillar-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.pillar-item p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ==========================================================================
+   09. PRODUCT CATEGORIES (Visual Grid)
+   ========================================================================== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+@media (max-width: 1200px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+  position: relative;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  border-color: var(--border-wine);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.category-image-wrap {
+  aspect-ratio: 3/3.8;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-bg-secondary);
+}
+
+.category-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-card:hover .category-image-wrap img {
+  transform: scale(1.06);
+}
+
+.category-number {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-dark-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+}
+
+.category-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+}
+
+.category-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.category-card:hover .category-card-title {
+  color: var(--color-accent-wine);
+}
+
+.category-desc {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.category-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.category-link-text {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  transition: color var(--transition-fast);
+}
+
+.category-card:hover .category-link-text {
+  color: var(--color-accent-wine);
+}
+
+.category-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.category-card:hover .category-arrow {
+  background-color: var(--color-accent-wine);
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   10. PRODUCT SPEC DRAWER & MODAL
+   ========================================================================== */
+.spec-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 1010;
+  box-shadow: -15px 0 50px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.spec-drawer.active {
+  right: 0;
+}
+
+.spec-drawer-header {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+.spec-drawer-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.spec-image-banner {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.spec-image-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spec-table {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.spec-table th {
+  text-align: left;
+  padding: 0.75rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  width: 38%;
+}
+
+.spec-table td {
+  padding: 0.75rem 0;
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   11. MANUFACTURING PROCESS (Timeline)
+   ========================================================================== */
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.process-step-card:hover {
+  border-color: var(--border-wine);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.step-num-badge {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-accent-wine);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-num-badge::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: var(--border-light);
+  margin-left: 1rem;
+}
+
+.step-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.step-card-desc {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   12. PRIVATE LABEL / OEM SECTION
+   ========================================================================== */
+.oem-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+.oem-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.oem-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.oem-features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  width: 100%;
+  margin: 2rem 0 2.5rem;
+}
+
+.oem-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+}
+
+.oem-feature-item svg {
+  color: var(--color-accent-wine);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.oem-visual-frame {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+}
+
+.oem-visual-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .oem-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ==========================================================================
+   13. WHY BRANDS CHOOSE ATS (Horizontal Features)
+   ========================================================================== */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  padding: 2rem 1.6rem;
+  transition: all var(--transition-smooth);
+}
+
+.why-card:hover {
+  border-color: var(--border-wine);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+.why-number {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent-wine);
+  margin-bottom: 1rem;
+}
+
+.why-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.why-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   14. QUALITY SECTION (3 Columns)
+   ========================================================================== */
+.quality-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 900px) {
+  .quality-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quality-col-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-img-wrap {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.quality-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.quality-col-card:hover .quality-img-wrap img {
+  transform: scale(1.05);
+}
+
+.quality-col-content {
+  padding: 2rem;
+}
+
+.quality-col-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.quality-col-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.quality-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.quality-point-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+}
+
+.quality-point-item svg {
+  color: var(--color-accent-wine);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   15. FABRIC STUDIO & MATERIAL EXPLORER
+   ========================================================================== */
+.fabric-studio-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.fabric-tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--color-bg-secondary);
+}
+
+.fabric-tab-btn {
+  padding: 1.15rem 1.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.fabric-tab-btn:hover {
+  color: var(--color-text-main);
+}
+
+.fabric-tab-btn.active {
+  color: var(--color-accent-wine);
+  border-bottom-color: var(--color-accent-wine);
+  background-color: #FFFFFF;
+}
+
+.fabric-tab-pane {
+  display: none;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.fabric-tab-pane.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  animation: fadeIn 0.35s ease;
+}
+
+@media (max-width: 800px) {
+  .fabric-tab-pane.active {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   16. BRAND PARTNERSHIP (Dark Section)
+   ========================================================================== */
+.partnership-wrap {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.partnership-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.partnership-desc {
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  color: var(--color-dark-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.75rem;
+}
+
+.partnership-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* ==========================================================================
+   17. INQUIRY / RFQ SECTION
+   ========================================================================== */
+.inquiry-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .inquiry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inquiry-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry-guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.guarantee-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.guarantee-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-accent-wine-light);
+  color: var(--color-accent-wine);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guarantee-text h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.guarantee-text p {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.inquiry-form-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-card);
+}
+
+/* ==========================================================================
+   18. CONTACT SECTION
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  padding: clamp(2rem, 3vw, 3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-address-block {
+  margin: 1.5rem 0 2rem;
+  font-style: normal;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: var(--color-text-body);
+}
+
+.contact-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.contact-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.contact-action-btn:hover {
+  border-color: var(--color-accent-wine);
+  background-color: var(--color-accent-wine-light);
+  color: var(--color-accent-wine);
+}
+
+.hub-location-visual {
+  background-color: var(--color-dark-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  padding: clamp(2rem, 3vw, 3rem);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" width="600" height="760" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pantyCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5"/>
+      <stop offset="50%" stop-color="#F2EDE6"/>
+      <stop offset="100%" stop-color="#E5DCD0"/>
+    </linearGradient>
+    <linearGradient id="silkPanty" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FAF6F0"/>
+      <stop offset="100%" stop-color="#EBE3D4"/>
+    </linearGradient>
+    <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B2435"/>
+      <stop offset="100%" stop-color="#4C141E"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D59E"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#997722"/>
+    </linearGradient>
+    <pattern id="floralPantyLace" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 0 10 Q 5 2, 10 10 T 20 10" fill="none" stroke="#6A1E2D" stroke-width="0.75" opacity="0.35"/>
+      <circle cx="10" cy="10" r="2.5" fill="#6A1E2D" opacity="0.3"/>
+    </pattern>
+    <filter id="pantyDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#141416" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="760" fill="url(#pantyCanvas)"/>
+  <rect x="25" y="25" width="550" height="710" fill="none" stroke="#DCD1C2" stroke-width="1"/>
+  <rect x="35" y="35" width="530" height="690" fill="none" stroke="#6A1E2D" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Category Badge Top -->
+  <g transform="translate(300, 75)">
+    <rect x="-110" y="-14" width="220" height="28" rx="14" fill="#FAF8F5" stroke="#6A1E2D" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+      CATEGORY 02 &bull; PANTIES
+    </text>
+  </g>
+
+  <!-- Central Luxury Panties Composition -->
+  <g filter="url(#pantyDropShadow)" transform="translate(300, 390)">
+    
+    <!-- High-Waist Lace & Modal Brief Silhouette -->
+    <path d="M -190 -130 C -60 -150, 60 -150, 190 -130 L 180 -15 C 160 80, 80 150, 40 180 L -40 180 C -80 150, -160 80, -180 -15 Z" fill="url(#silkPanty)" stroke="#D8C8B8" stroke-width="2"/>
+    <path d="M -190 -130 C -60 -150, 60 -150, 190 -130 L 180 -15 C 160 80, 80 150, 40 180 L -40 180 C -80 150, -160 80, -180 -15 Z" fill="url(#floralPantyLace)"/>
+
+    <!-- Premium Plush Waistband with Wine Ribbon Trim -->
+    <path d="M -190 -130 C -60 -150, 60 -150, 190 -130" fill="none" stroke="url(#wineGrad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M -188 -115 C -60 -135, 60 -135, 188 -115" fill="none" stroke="#6A1E2D" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+
+    <!-- Gold Center Bow Charm on Waistband -->
+    <circle cx="0" cy="-142" r="4.5" fill="url(#gold)"/>
+    <path d="M -6 -138 Q -10 -126, -7 -116" fill="none" stroke="url(#wineGrad)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 6 -138 Q 10 -126, 7 -116" fill="none" stroke="url(#wineGrad)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Scalloped Leg Openings with Soft Stretch Elastic -->
+    <path d="M -180 -15 C -160 80, -80 150, -40 180" fill="none" stroke="url(#wineGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 180 -15 C 160 80, 80 150, 40 180" fill="none" stroke="url(#wineGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- 100% Organic Cotton Hypoallergenic Gusset -->
+    <path d="M -35 120 C -12 110, 12 110, 35 120 L 40 180 L -40 180 Z" fill="#FAF8F5" stroke="#6A1E2D" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <text x="0" y="152" font-family="'Space Mono', monospace" font-size="8.5" font-weight="700" fill="#6A1E2D" text-anchor="middle" letter-spacing="1">100% COTTON GUSSET</text>
+
+    <!-- Side Panel Laser-Cut Contour Guidelines -->
+    <path d="M -90 -140 C -80 0, -45 110, -35 130" fill="none" stroke="#6A1E2D" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <path d="M 90 -140 C 80 0, 45 110, 35 130" fill="none" stroke="#6A1E2D" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Second Panty - Low-Rise Laser Cut Seamless Brief (Ghost Outline Below) -->
+    <path d="M -130 195 C -40 180, 40 180, 130 195 L 120 225 C 80 250, 40 265, 20 270 L -20 270 C -40 265, -80 250, -120 225 Z" fill="#FAF8F5" stroke="#6A1E2D" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+    <text x="0" y="240" font-family="'Space Mono', monospace" font-size="8" fill="#6A1E2D" text-anchor="middle" opacity="0.8">LASER-CUT SEAMLESS</text>
+  </g>
+
+  <!-- Editorial Footer -->
+  <text x="300" y="685" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="600" fill="#141416" text-anchor="middle" letter-spacing="4">
+    BIKINI &bull; HIPSTER &bull; SEAMLESS THONG
+  </text>
+  <text x="300" y="708" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+    ATS FASHION &amp; FABRICS &bull; GHAZIABAD
+  </text>
+</svg>

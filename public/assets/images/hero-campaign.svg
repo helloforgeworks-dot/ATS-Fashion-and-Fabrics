@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Rich Editorial Gradients -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F6F0"/>
+      <stop offset="50%" stop-color="#F0E8DC"/>
+      <stop offset="100%" stop-color="#E2D6C5"/>
+    </linearGradient>
+    <linearGradient id="silkDrapeWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84263B"/>
+      <stop offset="50%" stop-color="#6A1E2D"/>
+      <stop offset="100%" stop-color="#45121C"/>
+    </linearGradient>
+    <linearGradient id="satinChampagne" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#FBF8F3"/>
+      <stop offset="80%" stop-color="#EBE2D3"/>
+      <stop offset="100%" stop-color="#DACBB8"/>
+    </linearGradient>
+    <linearGradient id="goldLustre" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3DCAC"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9C7923"/>
+    </linearGradient>
+    <pattern id="laceGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="10" fill="none" stroke="#6A1E2D" stroke-width="0.8" opacity="0.3"/>
+      <circle cx="14" cy="14" r="3" fill="#6A1E2D" opacity="0.25"/>
+      <path d="M 0 14 Q 7 4, 14 14 T 28 14" fill="none" stroke="#6A1E2D" stroke-width="0.6" opacity="0.3"/>
+      <path d="M 14 0 Q 24 7, 14 14 T 14 28" fill="none" stroke="#6A1E2D" stroke-width="0.6" opacity="0.3"/>
+    </pattern>
+    <filter id="coutureShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="25" flood-color="#141416" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="800" height="1000" fill="url(#heroBg)"/>
+
+  <!-- Architectural Framing -->
+  <circle cx="700" cy="220" r="340" fill="#E8DECFA" opacity="0.7"/>
+  <rect x="40" y="40" width="720" height="920" fill="none" stroke="#D8CBB9" stroke-width="1.5"/>
+  <rect x="55" y="55" width="690" height="890" fill="none" stroke="#6A1E2D" stroke-width="0.5" stroke-dasharray="8,6" opacity="0.35"/>
+
+  <!-- Editorial Watermark Header -->
+  <text x="400" y="115" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="600" fill="#6A1E2D" text-anchor="middle" letter-spacing="8">
+    ATS ATELIER &bull; AUTONOMOUS CRAFTSMANSHIP
+  </text>
+  <line x1="220" y1="135" x2="580" y2="135" stroke="#6A1E2D" stroke-width="1" opacity="0.3"/>
+
+  <!-- Fluid Silk Background Drape in Wine & Rose -->
+  <g opacity="0.95">
+    <path d="M 100 850 C 180 620, 240 700, 360 580 C 480 460, 580 520, 720 380 L 760 960 L 40 960 Z" fill="url(#silkDrapeWine)"/>
+    <path d="M 100 850 C 220 750, 340 820, 480 720 C 600 620, 680 700, 760 620 L 760 960 L 40 960 Z" fill="#45121C" opacity="0.4"/>
+  </g>
+
+  <!-- Main Luxury Lingerie Masterpiece -->
+  <g filter="url(#coutureShadow)" transform="translate(400, 470)">
+    
+    <!-- Satin Slip Base Contour -->
+    <path d="M -170 180 C -120 140, 120 140, 170 180 L 240 380 C 120 410, -120 410, -240 380 Z" fill="url(#satinChampagne)" stroke="#D4C4B0" stroke-width="2"/>
+    <path d="M -240 380 Q 0 410, 240 380" fill="none" stroke="#6A1E2D" stroke-width="2" opacity="0.8"/>
+
+    <!-- Left Bra Cup Structure -->
+    <g transform="translate(-95, -30)">
+      <!-- Molded Cup Shell -->
+      <path d="M -95 35 C -95 -60, -20 -105, 45 -70 C 85 -45, 95 25, 50 70 C 5 110, -85 95, -95 35 Z" fill="url(#satinChampagne)" stroke="#CFC0AD" stroke-width="2.5"/>
+      <!-- French Lace Texture Overlay -->
+      <path d="M -95 35 C -95 -60, -20 -105, 45 -70 C 85 -45, 95 25, 50 70 C 5 110, -85 95, -95 35 Z" fill="url(#laceGrid)"/>
+      <!-- Ergonomic Underwire Casing in Deep Wine -->
+      <path d="M -95 35 C -75 100, 10 110, 50 70" fill="none" stroke="#6A1E2D" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Cup Apex Molding Seam -->
+      <path d="M -25 -95 C -12 -15, 8 35, 0 85" fill="none" stroke="#6A1E2D" stroke-width="1.8" stroke-dasharray="3,3" opacity="0.8"/>
+      <!-- Gold Apex Ring -->
+      <circle cx="-15" cy="-100" r="7" fill="none" stroke="url(#goldLustre)" stroke-width="2.5"/>
+      <!-- Satin Shoulder Strap -->
+      <path d="M -15 -107 L -45 -260" fill="none" stroke="#6A1E2D" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M -15 -107 L -45 -260" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <!-- Gold Alloy Slider -->
+      <rect x="-38" y="-190" width="16" height="7" rx="2" fill="url(#goldLustre)" transform="rotate(11, -30, -186)"/>
+    </g>
+
+    <!-- Right Bra Cup Structure -->
+    <g transform="translate(95, -30)">
+      <!-- Molded Cup Shell -->
+      <path d="M 95 35 C 95 -60, 20 -105, -45 -70 C -85 -45, -95 25, -50 70 C -5 110, 85 95, 95 35 Z" fill="url(#satinChampagne)" stroke="#CFC0AD" stroke-width="2.5"/>
+      <!-- French Lace Texture Overlay -->
+      <path d="M 95 35 C 95 -60, 20 -105, -45 -70 C -85 -45, -95 25, -50 70 C -5 110, 85 95, 95 35 Z" fill="url(#laceGrid)"/>
+      <!-- Ergonomic Underwire Casing in Deep Wine -->
+      <path d="M 95 35 C 75 100, -10 110, -50 70" fill="none" stroke="#6A1E2D" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Cup Apex Molding Seam -->
+      <path d="M 25 -95 C 12 -15, -8 35, 0 85" fill="none" stroke="#6A1E2D" stroke-width="1.8" stroke-dasharray="3,3" opacity="0.8"/>
+      <!-- Gold Apex Ring -->
+      <circle cx="15" cy="-100" r="7" fill="none" stroke="url(#goldLustre)" stroke-width="2.5"/>
+      <!-- Satin Shoulder Strap -->
+      <path d="M 15 -107 L 45 -260" fill="none" stroke="#6A1E2D" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 15 -107 L 45 -260" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <!-- Gold Alloy Slider -->
+      <rect x="22" y="-190" width="16" height="7" rx="2" fill="url(#goldLustre)" transform="rotate(-11, 30, -186)"/>
+    </g>
+
+    <!-- Center Gore Bridge & Ribbon Tie -->
+    <path d="M -45 45 L 45 45 L 0 62 Z" fill="#FAF8F5" stroke="#CFC0AD" stroke-width="2"/>
+    <circle cx="0" cy="46" r="5" fill="url(#goldLustre)"/>
+    <path d="M -10 52 Q -18 66, -12 78" fill="none" stroke="#6A1E2D" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 10 52 Q 18 66, 12 78" fill="none" stroke="#6A1E2D" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Wing Bands -->
+    <path d="M -190 12 C -235 18, -275 30, -305 48 L -305 88 C -265 70, -220 58, -165 52" fill="url(#satinChampagne)" stroke="#CFC0AD" stroke-width="2"/>
+    <path d="M 190 12 C 235 18, 275 30, 305 48 L 305 88 C 265 70, 220 58, 165 52" fill="url(#satinChampagne)" stroke="#CFC0AD" stroke-width="2"/>
+
+    <!-- Technical Schematics Annotations -->
+    <g opacity="0.75" font-family="'Space Mono', monospace" font-size="10" fill="#6A1E2D">
+      <line x1="-210" y1="-80" x2="-210" y2="80" stroke="#6A1E2D" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="-222" y="5" text-anchor="end" font-weight="700">R: 85mm</text>
+
+      <line x1="210" y1="-80" x2="210" y2="80" stroke="#6A1E2D" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="222" y="5" text-anchor="start" font-weight="700">TOL: &plusmn;0.5mm</text>
+    </g>
+  </g>
+
+  <!-- Bottom Brand Seal -->
+  <g transform="translate(400, 915)">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#141416" text-anchor="middle" letter-spacing="4">
+      ATS FASHION &amp; FABRICS &bull; GHAZIABAD
+    </text>
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+      OEM &bull; PRIVATE LABEL &bull; EXPORT COMPLIANT
+    </text>
+  </g>
+</svg>

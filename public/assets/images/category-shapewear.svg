@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" width="600" height="760" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="shapeCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5"/>
+      <stop offset="50%" stop-color="#F1EAE0"/>
+      <stop offset="100%" stop-color="#E3D7C8"/>
+    </linearGradient>
+    <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B2435"/>
+      <stop offset="100%" stop-color="#4C141E"/>
+    </linearGradient>
+    <linearGradient id="compressionLayer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B2435" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#7B2435" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#7B2435" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="shapeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#141416" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="760" fill="url(#shapeCanvas)"/>
+  <rect x="25" y="25" width="550" height="710" fill="none" stroke="#DCD1C2" stroke-width="1"/>
+  <rect x="35" y="35" width="530" height="690" fill="none" stroke="#6A1E2D" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Category Badge Top -->
+  <g transform="translate(300, 75)">
+    <rect x="-120" y="-14" width="240" height="28" rx="14" fill="#FAF8F5" stroke="#6A1E2D" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+      CATEGORY 05 &bull; SHAPEWEAR
+    </text>
+  </g>
+
+  <!-- Central Sculpting Bodysuit Silhouette -->
+  <g filter="url(#shapeShadow)" transform="translate(300, 390)">
+    
+    <!-- Open-Bust Sculpting Bodysuit Contour -->
+    <path d="M -120 -150 C -75 -175, 75 -175, 120 -150 L 110 -40 C 75 10, 65 60, 95 110 L 85 190 C 45 205, -45 205, -85 190 L -95 110 C -65 60, -75 10, -110 -40 Z" fill="#FFFFFF" stroke="#D8C8B8" stroke-width="2"/>
+
+    <!-- Open Bust Scoop Arch -->
+    <path d="M -90 -130 C -45 -80, 45 -80, 90 -130" fill="none" stroke="url(#wineGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Targeted Dual-Layer Tummy Compression Panel -->
+    <path d="M -55 -20 C -25 -30, 25 -30, 55 -20 L 45 100 C 25 130, -25 130, -45 100 Z" fill="url(#compressionLayer)" stroke="url(#wineGrad)" stroke-width="1.8" stroke-dasharray="4,2"/>
+    <text x="0" y="55" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#6A1E2D" text-anchor="middle" letter-spacing="1">FIRM CORE CONTROL</text>
+
+    <!-- Side Contour Shaping Ribs -->
+    <path d="M -95 -20 C -70 30, -70 70, -85 110" fill="none" stroke="#6A1E2D" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <path d="M 95 -20 C 70 30, 70 70, 85 110" fill="none" stroke="#6A1E2D" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Adjustable Shoulder Straps -->
+    <line x1="-85" y1="-155" x2="-65" y2="-220" stroke="url(#wineGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="85" y1="-155" x2="65" y2="-220" stroke="url(#wineGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Anti-Slip Silicone Ribbing on Thigh Openings -->
+    <path d="M -85 190 Q 0 205, 85 190" fill="none" stroke="#D4AF37" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="0" y="225" font-family="'Space Mono', monospace" font-size="8" fill="#6A1E2D" text-anchor="middle">ANTI-ROLL SILICONE</text>
+  </g>
+
+  <!-- Editorial Footer -->
+  <text x="300" y="685" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="600" fill="#141416" text-anchor="middle" letter-spacing="4">
+    BODYSUITS &bull; TUMMY CONTROL &bull; THIGH SLIMMERS
+  </text>
+  <text x="300" y="708" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+    ATS FASHION &amp; FABRICS &bull; GHAZIABAD
+  </text>
+</svg>

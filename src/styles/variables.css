@@ -1,0 +1,69 @@
+:root {
+  /* Core Color Palette - Editorial & Restrained */
+  --color-bg-primary: #FAF8F5;
+  --color-bg-secondary: #F3EFEA;
+  --color-bg-tertiary: #EBE5DC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-hover: #FCFAF8;
+  
+  --color-dark-primary: #0C0C0D;
+  --color-dark-secondary: #18181A;
+  --color-dark-card: #202023;
+  --color-dark-border: rgba(255, 255, 255, 0.12);
+  --color-dark-text-muted: #A3A3A8;
+
+  --color-text-main: #141416;
+  --color-text-body: #3E3E42;
+  --color-text-muted: #6E6E73;
+  --color-text-light: #FAF8F5;
+  --color-text-subtle: #8E8E93;
+
+  /* Refined Accents */
+  --color-accent-wine: #6A1E2D;
+  --color-accent-wine-hover: #531723;
+  --color-accent-wine-light: rgba(106, 30, 45, 0.08);
+  --color-accent-rose: #C59B9B;
+  --color-accent-rose-subtle: rgba(197, 155, 155, 0.18);
+  --color-gold-muted: #BFA175;
+
+  /* Borders & Dividers */
+  --border-light: rgba(20, 20, 22, 0.08);
+  --border-medium: rgba(20, 20, 22, 0.15);
+  --border-strong: rgba(20, 20, 22, 0.28);
+  --border-wine: rgba(106, 30, 45, 0.25);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Shadows - Minimal & Refined */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 20px 45px rgba(0, 0, 0, 0.08);
+  --shadow-floating: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+  /* Layout Spacing */
+  --container-max-width: 1400px;
+  --container-editorial-width: 1200px;
+  --container-narrow-width: 900px;
+  --header-height: 84px;
+  --header-height-scrolled: 70px;
+  
+  /* Radii - Subtle & Architectural */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Backdrop Blur */
+  --blur-glass: blur(16px);
+}

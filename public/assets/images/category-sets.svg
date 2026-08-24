@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" width="600" height="760" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="setBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="50%" stop-color="#F1ECE3"/>
+      <stop offset="100%" stop-color="#E5DCD0"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#802537"/>
+      <stop offset="100%" stop-color="#4A131E"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D59E"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#997722"/>
+    </linearGradient>
+    <pattern id="setFloral" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 0 11 Q 5.5 2, 11 11 T 22 11" fill="none" stroke="#6A1E2D" stroke-width="0.75" opacity="0.35"/>
+      <circle cx="11" cy="11" r="2.5" fill="#6A1E2D" opacity="0.3"/>
+    </pattern>
+    <filter id="setShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#141416" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="760" fill="url(#setBg)"/>
+  <rect x="25" y="25" width="550" height="710" fill="none" stroke="#DCD1C2" stroke-width="1"/>
+  <rect x="35" y="35" width="530" height="690" fill="none" stroke="#6A1E2D" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- Category Badge Top -->
+  <g transform="translate(300, 75)">
+    <rect x="-120" y="-14" width="240" height="28" rx="14" fill="#FAF8F5" stroke="#6A1E2D" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+      CATEGORY 03 &bull; LINGERIE SETS
+    </text>
+  </g>
+
+  <!-- Central Matched Lingerie Ensemble -->
+  <g filter="url(#setShadow)" transform="translate(300, 370)">
+    
+    <!-- TOP: Plunge Lace Bralette -->
+    <g transform="translate(0, -95)">
+      <!-- Left Lace Triangle Cup -->
+      <path d="M -100 45 L -55 -75 L -10 45 Z" fill="#FAF8F5" stroke="#D8C8B8" stroke-width="2"/>
+      <path d="M -100 45 L -55 -75 L -10 45 Z" fill="url(#setFloral)"/>
+      <path d="M -100 45 L -55 -75" stroke="url(#wine)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-55" y1="-75" x2="-55" y2="-130" stroke="url(#wine)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-55" cy="-75" r="5" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+      <!-- Right Lace Triangle Cup -->
+      <path d="M 10 45 L 55 -75 L 100 45 Z" fill="#FAF8F5" stroke="#D8C8B8" stroke-width="2"/>
+      <path d="M 10 45 L 55 -75 L 100 45 Z" fill="url(#setFloral)"/>
+      <path d="M 100 45 L 55 -75" stroke="url(#wine)" stroke-width="3" stroke-linecap="round"/>
+      <line x1="55" y1="-75" x2="55" y2="-130" stroke="url(#wine)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="55" cy="-75" r="5" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+      <!-- Underband Satin Ribbon -->
+      <rect x="-120" y="45" width="240" height="14" fill="url(#wine)" rx="2"/>
+      <line x1="-120" y1="52" x2="120" y2="52" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+
+      <!-- Center Gold Ring -->
+      <circle cx="0" cy="52" r="5.5" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    </g>
+
+    <!-- Midriff Architectural Strapping -->
+    <g transform="translate(0, -35)">
+      <line x1="-90" y1="0" x2="0" y2="45" stroke="url(#wine)" stroke-width="2"/>
+      <line x1="90" y1="0" x2="0" y2="45" stroke="url(#wine)" stroke-width="2"/>
+      <circle cx="0" cy="45" r="5" fill="url(#gold)"/>
+    </g>
+
+    <!-- BOTTOM: Matched High-Waist Lace Brief -->
+    <g transform="translate(0, 110)">
+      <path d="M -120 -25 C -45 -35, 45 -35, 120 -25 L 110 30 C 90 85, 45 130, 25 150 L -25 150 C -45 130, -90 85, -110 30 Z" fill="#FAF8F5" stroke="#D8C8B8" stroke-width="2"/>
+      <path d="M -120 -25 C -45 -35, 45 -35, 120 -25 L 110 30 C 90 85, 45 130, 25 150 L -25 150 C -45 130, -90 85, -110 30 Z" fill="url(#setFloral)"/>
+      <rect x="-120" y="-25" width="240" height="12" fill="url(#wine)" rx="2"/>
+
+      <!-- Garter Straps with Gold Clips -->
+      <path d="M -80 10 L -95 100" stroke="url(#wine)" stroke-width="2.5"/>
+      <rect x="-100" y="95" width="10" height="14" rx="2" fill="url(#gold)"/>
+
+      <path d="M 80 10 L 95 100" stroke="url(#wine)" stroke-width="2.5"/>
+      <rect x="90" y="95" width="10" height="14" rx="2" fill="url(#gold)"/>
+    </g>
+  </g>
+
+  <!-- Editorial Footer -->
+  <text x="300" y="685" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="600" fill="#141416" text-anchor="middle" letter-spacing="4">
+    MATCHED BRALETTE &amp; BRIEF SETS
+  </text>
+  <text x="300" y="708" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#6A1E2D" text-anchor="middle" letter-spacing="2">
+    ATS FASHION &amp; FABRICS &bull; GHAZIABAD
+  </text>
+</svg>
