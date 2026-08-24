@@ -9,16 +9,20 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: var(--color-text-main);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  font-size: clamp(2.1rem, 5.5vw, 5.2rem);
   font-weight: 800;
-  line-height: 1.02;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--color-text-main);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-title span {
@@ -46,17 +50,19 @@ h1, h2, h3, h4, h5, h6,
 
 .section-headline {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-size: clamp(1.85rem, 3.8vw, 3.6rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--color-text-main);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .card-title {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.65rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -64,26 +70,28 @@ h1, h2, h3, h4, h5, h6,
   color: var(--color-text-main);
 }
 
-/* Glowing Eyebrows & Status Badges */
+/* Eyebrows & Status Badges */
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-cyan-deep);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
+  max-width: 100%;
 }
 
 .eyebrow::before {
   content: "";
   display: inline-block;
-  width: 20px;
+  width: 18px;
   height: 2px;
   background: linear-gradient(90deg, var(--color-cyan-glow), transparent);
+  flex-shrink: 0;
 }
 
 .eyebrow-dark {
@@ -96,23 +104,23 @@ h1, h2, h3, h4, h5, h6,
 
 .credibility-line {
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .body-lead {
-  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.22rem);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--color-text-body);
 }
 
 .body-regular {
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: 0.94rem;
+  line-height: 1.65;
   color: var(--color-text-muted);
 }
 
@@ -122,22 +130,44 @@ h1, h2, h3, h4, h5, h6,
 
 .number-prefix {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: var(--color-cyan-deep);
 }
 
 .spec-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .spec-value {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--color-text-main);
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.08;
+  }
+  
+  .section-headline {
+    font-size: 1.85rem;
+    line-height: 1.12;
+  }
+  
+  .body-lead {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  
+  .body-regular {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
 }

@@ -19,7 +19,7 @@
   gap: clamp(2rem, 4vw, 5rem);
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 6rem) clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(2.5rem, 5vw, 6rem) clamp(1.25rem, 3vw, 2.5rem);
   width: 100%;
   position: relative;
   z-index: 2;
@@ -29,18 +29,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .hero-badge-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-title span {
@@ -48,11 +49,11 @@
 }
 
 .hero-description {
-  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  font-size: clamp(1rem, 1.25vw, 1.22rem);
   line-height: 1.65;
   color: var(--color-text-body);
   max-width: 580px;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 
@@ -61,14 +62,15 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
 }
 
 .hero-credibility {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-top: 1.75rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-light);
   width: 100%;
   max-width: 540px;
@@ -77,7 +79,7 @@
 .hero-credibility-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  gap: 0.4rem 0.8rem;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -94,7 +96,7 @@
 .hero-credibility-pills span::after {
   content: "•";
   color: var(--color-cyan-deep);
-  margin-left: 0.6rem;
+  margin-left: 0.5rem;
 }
 
 .hero-credibility-pills span:last-child::after {
@@ -110,7 +112,6 @@
 .hero-visual-frame {
   position: relative;
   aspect-ratio: 4/5;
-  min-height: 480px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   box-shadow: var(--shadow-floating);
@@ -192,20 +193,116 @@
   to { transform: rotate(360deg); }
 }
 
+/* Tablet & Mobile Layouts */
 @media (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 1.5rem);
+    padding-bottom: 3.5rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    padding-top: 2rem;
+    gap: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   .hero-visual {
-    max-width: 540px;
+    max-width: 500px;
     margin: 0 auto;
+    width: 100%;
   }
   
   .hero-floating-card {
-    left: 0.5rem;
+    left: 1rem;
     bottom: -1rem;
+    max-width: 260px;
+    padding: 1rem 1.25rem;
+  }
+  
+  .hero-stamp {
+    top: -1rem;
+    right: -1rem;
+    width: 80px;
+    height: 80px;
+    font-size: 0.56rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: calc(var(--header-height) + 0.75rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-grid {
+    padding: 0.75rem 1rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .hero-badge-group .badge {
+    font-size: 0.64rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.78rem;
+  }
+
+  .hero-credibility {
+    padding-top: 1.25rem;
+  }
+
+  .hero-credibility-pills {
+    font-size: 0.68rem;
+    gap: 0.35rem 0.6rem;
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
+
+  .hero-visual-frame {
+    aspect-ratio: 4/4.5;
+    min-height: auto;
+  }
+
+  .hero-floating-card {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-stamp {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 64px;
+    height: 64px;
+    font-size: 0.5rem;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
   }
 }
