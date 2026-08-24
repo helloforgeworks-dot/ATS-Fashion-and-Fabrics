@@ -99,7 +99,7 @@ export function initFabricStudio() {
       <div class="fabric-tab-pane active" id="fabric-pane-${fabric.id}">
         <div class="fabric-info-col">
           <div class="badge badge-wine" style="margin-bottom:1rem;">${fabric.badge}</div>
-          <h3 style="font-family:var(--font-serif); font-size:clamp(1.6rem, 2.5vw, 2.2rem); text-transform:uppercase; margin-bottom:1rem;">
+          <h3 style="font-family:var(--font-display); font-size:clamp(1.6rem, 2.5vw, 2.2rem); font-weight:800; text-transform:uppercase; color:#FFFFFF; margin-bottom:1rem;">
             ${fabric.name}
           </h3>
           <p style="font-size:0.92rem; color:var(--color-text-body); line-height:1.65; margin-bottom:1.5rem;">
@@ -141,7 +141,7 @@ export function initFabricStudio() {
         </div>
 
         <div class="fabric-visual-col">
-          <div style="aspect-ratio:4/3.5; border-radius:var(--radius-xs); overflow:hidden; border:1px solid var(--border-light); box-shadow:var(--shadow-card);">
+          <div style="aspect-ratio:4/3.5; border-radius:var(--radius-sm); overflow:hidden; border:1px solid var(--border-medium); box-shadow:0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(0,229,255,0.15);">
             <img 
               src="${fabric.image}" 
               alt="${fabric.alt}" 

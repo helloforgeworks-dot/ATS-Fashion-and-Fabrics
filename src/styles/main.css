@@ -26,7 +26,7 @@
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
-/* Custom scrollbar */
+/* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -37,10 +37,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D5CEC5;
+  background: #1E293B;
   border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-wine);
+  background: var(--color-cyan-glow);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }

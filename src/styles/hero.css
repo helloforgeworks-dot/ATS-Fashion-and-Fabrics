@@ -6,7 +6,24 @@
   display: flex;
   align-items: center;
   background-color: var(--color-bg-primary);
+  background-image: 
+    radial-gradient(ellipse 60% 50% at 75% 30%, rgba(0, 229, 255, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 70%, rgba(14, 165, 233, 0.08) 0%, transparent 60%);
   overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -38,6 +55,7 @@
 
 .hero-title {
   margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .hero-title span {
@@ -50,7 +68,7 @@
   color: var(--color-text-body);
   max-width: 580px;
   margin-bottom: 2.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -76,10 +94,10 @@
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-powder-blue);
 }
 
 .hero-credibility-pills span {
@@ -90,8 +108,9 @@
 
 .hero-credibility-pills span::after {
   content: "•";
-  color: var(--color-accent-wine);
+  color: var(--color-cyan-glow);
   margin-left: 0.6rem;
+  text-shadow: 0 0 8px var(--color-cyan-glow);
 }
 
 .hero-credibility-pills span:last-child::after {
@@ -108,9 +127,9 @@
   position: relative;
   aspect-ratio: 4/5;
   min-height: 480px;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: var(--shadow-floating);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 229, 255, 0.2);
   background-color: var(--color-bg-secondary);
   border: 1px solid var(--border-medium);
   display: flex;
@@ -134,28 +153,29 @@
   position: absolute;
   bottom: -1.5rem;
   left: -2rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 1.25rem 1.6rem;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-elevated);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 229, 255, 0.15);
   max-width: 280px;
   z-index: 3;
 }
 
 .hero-floating-card .card-metric {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-text-main);
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-cyan-glow);
   line-height: 1;
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
 }
 
 .hero-floating-card .card-caption {
   font-size: 0.74rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   margin-top: 0.35rem;
   line-height: 1.35;
 }
@@ -164,11 +184,11 @@
   position: absolute;
   top: -1.5rem;
   right: -1.5rem;
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
-  background-color: var(--color-accent-wine);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #0284C7 0%, #00E5FF 100%);
+  color: #04060A;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,10 +196,10 @@
   text-align: center;
   font-family: var(--font-sans);
   font-size: 0.62rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  box-shadow: 0 10px 25px rgba(106, 30, 45, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.45);
   z-index: 3;
   animation: rotateStamp 25s linear infinite;
 }

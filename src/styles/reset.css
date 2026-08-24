@@ -11,10 +11,17 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-primary);
 }
 
 body {
   background-color: var(--color-bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 35%, rgba(0, 229, 255, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 75%, rgba(186, 230, 253, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #070A11 0%, #0A0F1D 50%, #070A11 100%);
+  background-attachment: fixed;
   color: var(--color-text-main);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -57,12 +64,12 @@ table {
 }
 
 ::selection {
-  background-color: var(--color-accent-wine);
-  color: var(--color-text-light);
+  background-color: var(--color-cyan-glow);
+  color: #04060A;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent-wine);
+  outline: 2px solid var(--color-cyan-glow);
   outline-offset: 3px;
 }
 
