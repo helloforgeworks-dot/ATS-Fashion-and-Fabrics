@@ -9,7 +9,9 @@ export const productCategories = [
     title: 'Bras',
     subtitle: 'Precision Engineered Support & Silhouettes',
     description: 'T-shirt bras, wire-free bralettes, plunge, push-up, balconette, sports & nursing bras manufactured with ergonomic cup molding and premium hardware.',
-    image: '/assets/images/category-bras.svg',
+    image: '/images/products/bras/ats-bras.jpg',
+    fallbackImage: '/assets/images/category-bras.svg',
+    alt: 'Precision bra molding and underwire assembly by ATS Fashion & Fabrics',
     capabilities: [
       'Custom Memory Foam & Spacer Cup Molding',
       'Underwire & Wire-Free Ergonomic Architecture',
@@ -27,7 +29,9 @@ export const productCategories = [
     title: 'Panties',
     subtitle: 'Intimate Comfort & Second-Skin Finishing',
     description: 'Bikini, hipster, thong, boyshort, high-waist & laser-cut seamless briefs engineered for zero panty-lines, breathability and stretch recovery.',
-    image: '/assets/images/category-panties.svg',
+    image: '/images/products/panties/ats-panties.jpg',
+    fallbackImage: '/assets/images/category-panties.svg',
+    alt: "Women's luxury panties and laser-cut seamless briefs manufactured by ATS",
     capabilities: [
       'Laser-Cut Raw Edges & Stitchless Heat Bonding',
       '100% Anti-Microbial Organic Cotton Gussets',
@@ -45,7 +49,9 @@ export const productCategories = [
     title: 'Lingerie Sets',
     subtitle: 'Coordinated Haute Couture & Everyday Luxury',
     description: 'Matching bralette and brief combinations, luxury lace corsetry, satin garters and multi-piece coordinated collections crafted with pattern symmetry.',
-    image: '/assets/images/category-sets.svg',
+    image: '/images/products/lingerie-sets/ats-lingerie-sets.jpg',
+    fallbackImage: '/assets/images/category-sets.svg',
+    alt: 'Coordinated luxury lace lingerie set production by ATS Fashion & Fabrics',
     capabilities: [
       'Precision Motif Placement & Symmetry Matching',
       'Intricate Eyelash Lace & Embroidery Inlay',
@@ -63,7 +69,9 @@ export const productCategories = [
     title: 'Seamless Wear',
     subtitle: 'Advanced 3D Knit & Stitchless Innovation',
     description: 'Zero-seam circular knit tops, bralettes, shorts and slips that contour flawlessly without pressure points or visible lines.',
-    image: '/assets/images/category-seamless.svg',
+    image: '/images/products/seamless/ats-seamless.jpg',
+    fallbackImage: '/assets/images/category-seamless.svg',
+    alt: '3D seamless circular knit and stitchless bonded intimate apparel by ATS',
     capabilities: [
       'San-Toni Circular 3D Knitting Technology',
       'Targeted Compression & Ventilation Zoning',
@@ -81,7 +89,9 @@ export const productCategories = [
     title: 'Shapewear',
     subtitle: 'Targeted Sculpting & Breathable Control',
     description: 'Light, medium and firm compression bodysuits, high-waist tummy control briefs, thigh slimmers and waist cinchers with anti-roll silicone engineering.',
-    image: '/assets/images/category-shapewear.svg',
+    image: '/images/products/shapewear/ats-shapewear.jpg',
+    fallbackImage: '/assets/images/category-shapewear.svg',
+    alt: 'Targeted compression sculpting shapewear bodysuit manufacturing by ATS',
     capabilities: [
       'Zoned Compression Mapping for Optimal Contour',
       'Medical-Grade Anti-Slip Silicone Edge Grippers',
@@ -99,7 +109,9 @@ export const productCategories = [
     title: 'Nightwear',
     subtitle: 'Sensorial Loungewear & Fluid Silhouettes',
     description: 'Bias-cut satin slips, camisole & tap short sets, modal lounge robes, pajamas and sleep shirts tailored with french seams and drape.',
-    image: '/assets/images/category-nightwear.svg',
+    image: '/images/products/nightwear/ats-nightwear.jpg',
+    fallbackImage: '/assets/images/category-nightwear.svg',
+    alt: 'Silk satin slip dress and modal loungewear nightwear collection by ATS',
     capabilities: [
       'French Seam Tailoring & Bias-Cut Drape Engineering',
       'Fine Hemming & Eyelash Lace Insets',
@@ -117,7 +129,9 @@ export const productCategories = [
     title: 'Custom Lingerie',
     subtitle: 'Bespoke Development from Tech Packs & Sketches',
     description: 'Full-spectrum custom product development for avant-garde designs, unique size-grading, bespoke trims, specialty embroideries and proprietary cup molds.',
-    image: '/assets/images/category-custom.svg',
+    image: '/images/products/custom/ats-custom-lingerie.jpg',
+    fallbackImage: '/assets/images/category-custom.svg',
+    alt: 'Custom lingerie product development and tech pack pattern drafting at ATS atelier',
     capabilities: [
       'Tech-Pack Interpretation & Rapid 3D Pattern Grading',
       'Proprietary Tooling & Custom Cup Mold Creation',
@@ -135,7 +149,9 @@ export const productCategories = [
     title: 'Private Label & OEM',
     subtitle: 'Turn-Key Brand Manufacturing from Ghaziabad Hub',
     description: 'Complete end-to-end production solutions with custom woven labels, heat-transfer branding, barcode hangtags, polybags, eco boxes and export packaging.',
-    image: '/assets/images/category-privatelabel.svg',
+    image: '/images/products/private-label/ats-private-label.jpg',
+    fallbackImage: '/assets/images/category-privatelabel.svg',
+    alt: 'Private label lingerie packaging, embossed hangtags, and branded labels by ATS',
     capabilities: [
       'Woven, Satin & Tagless Heat-Transfer Care Labels',
       'Custom Embossed Hangtags & Barcode Labeling',
@@ -177,7 +193,12 @@ export function initProductGallery() {
     if (descEl) descEl.textContent = data.description;
     if (imageEl) {
       imageEl.src = data.image;
-      imageEl.alt = `${data.title} Manufacturing - ATS Fashion & Fabrics`;
+      imageEl.alt = data.alt;
+      imageEl.onerror = () => {
+        if (imageEl.src !== data.fallbackImage) {
+          imageEl.src = data.fallbackImage;
+        }
+      };
     }
 
     if (capabilitiesEl) {

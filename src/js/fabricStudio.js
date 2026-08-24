@@ -13,7 +13,9 @@ export const fabricData = [
     breathability: 'Ultra-High (Grade A)',
     idealFor: 'Everyday panties, soft-cup bralettes, camisole nightwear',
     highlights: 'Derived from natural beechwood pulp. Exceptional silky softness, anti-pilling wash resistance, and thermal regulation.',
-    image: '/assets/images/fabric-modal.svg'
+    image: '/images/fabric-studio/ats-fabric-modal.jpg',
+    fallbackImage: '/assets/images/fabric-modal.svg',
+    alt: 'Micro-modal and elastane intimate apparel textile by ATS Fashion & Fabrics'
   },
   {
     id: 'microfiber',
@@ -25,7 +27,9 @@ export const fabricData = [
     breathability: 'High (Rapid Dry Technology)',
     idealFor: 'Laser-cut seamless briefs, T-shirt bra wings, bonded active innerwear',
     highlights: 'Zero-fray raw edge compatibility, ultrasonic bonding stability, ultra-smooth touch with invisible panty line performance.',
-    image: '/assets/images/fabric-microfiber.svg'
+    image: '/images/fabric-studio/ats-fabric-microfiber.jpg',
+    fallbackImage: '/assets/images/fabric-microfiber.svg',
+    alt: 'Bonded polyamide microfiber fabric for seamless lingerie by ATS'
   },
   {
     id: 'lace',
@@ -37,7 +41,9 @@ export const fabricData = [
     breathability: 'Maximal Ventilation / Sheer',
     idealFor: 'Lingerie sets, bridal corsetry, bra cup inlays, decorative waistband trims',
     highlights: 'Intricate jacquard raschel knitting, plush skin contact side, colorfast dye formulation for high-contrast palettes.',
-    image: '/assets/images/fabric-lace.svg'
+    image: '/images/fabric-studio/ats-fabric-lace.jpg',
+    fallbackImage: '/assets/images/fabric-lace.svg',
+    alt: 'French floral stretch lace textile for luxury lingerie by ATS'
   },
   {
     id: 'powernet',
@@ -49,7 +55,9 @@ export const fabricData = [
     breathability: 'Engineered Micro-Mesh Ventilation',
     idealFor: 'Shapewear bodysuits, bra cradle reinforcement, tummy-control waistbands',
     highlights: 'Firm contouring without trapping heat. Retains compression modulus across 100+ standard laundry cycles.',
-    image: '/assets/images/fabric-powernet.svg'
+    image: '/images/fabric-studio/ats-fabric-powernet.jpg',
+    fallbackImage: '/assets/images/fabric-powernet.svg',
+    alt: 'High-density powernet compression mesh for shapewear by ATS'
   },
   {
     id: 'bamboo',
@@ -61,7 +69,9 @@ export const fabricData = [
     breathability: 'High Natural Permeability',
     idealFor: 'Anti-microbial panty gussets, maternity innerwear, sensitive-skin basics',
     highlights: 'Naturally antibacterial and hypoallergenic. OEKO-TEX standard compliant eco-friendly dye processing.',
-    image: '/assets/images/fabric-bamboo.svg'
+    image: '/images/fabric-studio/ats-fabric-bamboo.jpg',
+    fallbackImage: '/assets/images/fabric-bamboo.svg',
+    alt: 'Hypoallergenic organic bamboo cotton knit by ATS'
   },
   {
     id: 'seamless-knit',
@@ -73,7 +83,9 @@ export const fabricData = [
     breathability: 'Zoned Jacquard Ventilation Mesh',
     idealFor: 'Athleisure bralettes, lounge shorts, seamless slips, comfort underwear',
     highlights: 'Manufactured on high-precision circular knitting machines with zero side-seams and engineered support ribs.',
-    image: '/assets/images/fabric-seamless.svg'
+    image: '/images/fabric-studio/ats-fabric-seamless.jpg',
+    fallbackImage: '/assets/images/fabric-seamless.svg',
+    alt: '3D seamless engineered circular knit textile by ATS'
   }
 ];
 
@@ -130,7 +142,12 @@ export function initFabricStudio() {
 
         <div class="fabric-visual-col">
           <div style="aspect-ratio:4/3.5; border-radius:var(--radius-xs); overflow:hidden; border:1px solid var(--border-light); box-shadow:var(--shadow-card);">
-            <img src="${fabric.image}" alt="${fabric.name} Fabric - ATS Fashion & Fabrics" style="width:100%; height:100%; object-fit:cover;">
+            <img 
+              src="${fabric.image}" 
+              alt="${fabric.alt}" 
+              style="width:100%; height:100%; object-fit:cover;"
+              onerror="if (this.src !== '${fabric.fallbackImage}') this.src = '${fabric.fallbackImage}';"
+            >
           </div>
         </div>
       </div>
