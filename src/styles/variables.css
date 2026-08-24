@@ -1,62 +1,62 @@
 :root {
-  /* Core Color Palette - Powder Blue, Electric Cyan, Deep Obsidian & Midnight Black */
-  --color-bg-primary: #070A11;
-  --color-bg-secondary: #0A0F1D;
-  --color-bg-tertiary: #0F172A;
-  --color-bg-card: rgba(15, 23, 42, 0.72);
-  --color-bg-card-hover: rgba(20, 32, 58, 0.88);
-  --color-bg-card-solid: #0E172A;
+  /* Core Color Palette - Luxury High-Fashion Light Theme with Powder Blue & Cyan Accents */
+  --color-bg-primary: #FAFCFF;
+  --color-bg-secondary: #F0F6FA;
+  --color-bg-tertiary: #E5F0F7;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-hover: #F8FBFE;
+  --color-bg-card-solid: #FFFFFF;
   
-  --color-dark-primary: #04060A;
-  --color-dark-secondary: #080C16;
-  --color-dark-card: #0F172A;
-  --color-dark-border: rgba(56, 189, 248, 0.18);
+  --color-dark-primary: #090D16;
+  --color-dark-secondary: #111827;
+  --color-dark-card: #182235;
+  --color-dark-border: rgba(255, 255, 255, 0.12);
   --color-dark-text-muted: #94A3B8;
 
-  --color-text-main: #F8FAFC;
-  --color-text-body: #CBD5E1;
-  --color-text-muted: #94A3B8;
+  --color-text-main: #090D16;
+  --color-text-body: #334155;
+  --color-text-muted: #64748B;
   --color-text-light: #FFFFFF;
-  --color-text-subtle: #64748B;
-  --color-text-cyan: #38BDF8;
-  --color-text-powder: #BAE6FD;
+  --color-text-subtle: #94A3B8;
+  --color-text-cyan: #0284C7;
+  --color-text-powder: #0369A1;
 
-  /* Vibrant Accents & Electric Glows */
-  --color-cyan-glow: #00E5FF;
-  --color-cyan-vibrant: #38BDF8;
-  --color-cyan-deep: #0284C7;
-  --color-cyan-hover: #00B4D8;
+  /* Vibrant Accents & Electric Blue Tones */
+  --color-cyan-glow: #0284C7;
+  --color-cyan-vibrant: #0EA5E9;
+  --color-cyan-deep: #0369A1;
+  --color-cyan-hover: #0284C7;
   --color-powder-blue: #BAE6FD;
   --color-powder-ice: #E0F2FE;
   
-  /* Legacy Accent Variable Bridges (remapped to new Cyan & Powder Blue theme) */
-  --color-accent-wine: #00E5FF;
-  --color-accent-wine-hover: #38BDF8;
-  --color-accent-wine-light: rgba(0, 229, 255, 0.12);
-  --color-accent-rose: #BAE6FD;
-  --color-accent-rose-subtle: rgba(186, 230, 253, 0.15);
-  --color-gold-muted: #38BDF8;
+  /* Legacy Accent Variable Bridges (Mapped to Luxury Cyan & Powder Blue) */
+  --color-accent-wine: #0284C7;
+  --color-accent-wine-hover: #0369A1;
+  --color-accent-wine-light: rgba(14, 165, 233, 0.1);
+  --color-accent-rose: #0EA5E9;
+  --color-accent-rose-subtle: rgba(14, 165, 233, 0.08);
+  --color-gold-muted: #0284C7;
 
-  /* Borders & Dividers with Glowing Cyan Tint */
-  --border-light: rgba(56, 189, 248, 0.14);
-  --border-medium: rgba(56, 189, 248, 0.28);
-  --border-strong: rgba(0, 229, 255, 0.45);
-  --border-wine: rgba(0, 229, 255, 0.35);
-  --border-cyan-glow: rgba(0, 229, 255, 0.65);
+  /* Borders & Dividers */
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.14);
+  --border-strong: rgba(2, 132, 199, 0.35);
+  --border-wine: rgba(2, 132, 199, 0.25);
+  --border-cyan-glow: rgba(14, 165, 233, 0.4);
 
   /* Modern Bold High-Fashion Typography */
-  --font-display: 'Syne', 'Cabinet Grotesk', 'Outfit', sans-serif;
+  --font-display: 'Syne', 'Outfit', sans-serif;
   --font-serif: 'Syne', 'Playfair Display', 'Cormorant Garamond', serif;
   --font-sans: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  /* Shadows - Futuristic Ambient Cyan Glows */
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(14, 165, 233, 0.08);
-  --shadow-elevated: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 229, 255, 0.15);
-  --shadow-floating: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 45px rgba(0, 229, 255, 0.22);
-  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.8);
-  --shadow-cyan-glow: 0 0 25px rgba(0, 229, 255, 0.4);
+  /* Shadows - Minimal, Soft & Feathered */
+  --shadow-subtle: 0 4px 20px rgba(15, 23, 42, 0.03);
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-elevated: 0 20px 45px rgba(15, 23, 42, 0.08), 0 0 20px rgba(14, 165, 233, 0.05);
+  --shadow-floating: 0 30px 60px rgba(15, 23, 42, 0.12), 0 0 30px rgba(14, 165, 233, 0.08);
+  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-cyan-glow: 0 0 25px rgba(14, 165, 233, 0.25);
 
   /* Layout Spacing */
   --container-max-width: 1400px;
@@ -79,5 +79,5 @@
   --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   
   /* Backdrop Blur Glass */
-  --blur-glass: blur(20px);
+  --blur-glass: blur(16px);
 }
