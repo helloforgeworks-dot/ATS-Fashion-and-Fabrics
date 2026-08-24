@@ -1013,14 +1013,15 @@
 }
 
 /* ==========================================================================
-   17. INQUIRY / RFQ SECTION
+   17. INQUIRY / RFQ SECTION - Fixed Card Sizing & Mobile Form Polish
    ========================================================================== */
 .inquiry-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(2rem, 4vw, 5rem);
+  gap: clamp(2rem, 4vw, 4.5rem);
   align-items: flex-start;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1088,17 +1089,19 @@
 
 .inquiry-form-card {
   background-color: #FFFFFF;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-sm);
-  padding: clamp(1.5rem, 3vw, 3rem);
-  box-shadow: var(--shadow-elevated);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
   .inquiry-form-card {
-    padding: 1.25rem 1rem;
+    padding: 1.5rem 1.15rem;
+    border-radius: 10px;
   }
 }
 
